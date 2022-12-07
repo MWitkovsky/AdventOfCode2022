@@ -13,6 +13,7 @@ def _day(inp: list[str]):
     Part 2:
 
     """
+    pass
 
 
 if __name__ == "__main__":
