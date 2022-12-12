@@ -98,7 +98,7 @@ class Rope:
             (node.x+half_x_dim, node.y+half_y_dim)
             for node in self.__rope_nodes
         }
-        os.system('cls')
+        os.system("cls")
         for y in range(y_dim):
             for x in range(x_dim):
                 if (x, y) in rope_positions:
