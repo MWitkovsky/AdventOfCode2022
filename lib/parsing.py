@@ -1,3 +1,6 @@
+import json
+
+
 class InputParser:
     def _check_file_closed(method):
         def inner(self, *args, **kwargs):
@@ -24,9 +27,13 @@ class InputParser:
         """
         content = self.file.read().splitlines()
         if elem_type != str:
+            elem_func = elem_type
+            if elem_type == "json":
+                def elem_func(x): return json.loads(x) if len(x) > 0 else ""
+
             for i, elem in enumerate(content):
                 try:
-                    content[i] = elem_type(elem)
+                    content[i] = elem_func(elem)
                 except:
                     if not suppress_warnings:
                         print(f"[WARNING]: element at line {i} failed to "

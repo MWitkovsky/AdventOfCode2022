@@ -82,7 +82,6 @@ def _hill_climbing_algorithm(inp: list[str]):
                 if dist != -1:
                     min_dist = min(dist, min_dist)
     print(f"Part 2: {min_dist}")
-    pass
 
 
 if __name__ == "__main__":
