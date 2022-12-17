@@ -37,11 +37,10 @@ class Packet:
                     other_segment = [other_segment]
                     other_type = list
 
-            if seg_type == other_type:
-                if seg_type == int:
-                    return packet_segment < other_segment
-                else:
-                    return Packet(packet_segment) < Packet(other_segment)
+            if seg_type == int:
+                return packet_segment < other_segment
+            else:
+                return Packet(packet_segment) < Packet(other_segment)
         return True
 
     @property
