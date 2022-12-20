@@ -9,7 +9,8 @@ GOAL_HEIGHT = 123
 MIN_HEIGHT = ord("a")
 
 
-def _can_walk_to_node(map: list[list[int, int]], from_pos: tuple[int, int], to_pos: tuple[int, int]) -> bool:
+def _can_walk_to_node(map: list[list[int, int]], from_pos: tuple[int, int],
+                      to_pos: tuple[int, int]) -> bool:
     from_val = map[from_pos[1]][from_pos[0]]
     target_x = to_pos[0]
     target_y = to_pos[1]
